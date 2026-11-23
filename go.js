@@ -20,9 +20,10 @@
   m.innerHTML =
     '<h1>홈 화면에 추가</h1>' +
     (nm ? '<p class="nm">' + nm + '</p>' : '') +
+    '<p class="w">지금 이 화면에서 바로 추가하세요. 앱으로 넘어간 뒤 추가하면 로고 대신 글자 아이콘이 생깁니다.</p>' +
     '<ol><li>Safari 아래쪽 <b>공유</b> 버튼(네모에 위 화살표)</li>' +
     '<li><b>홈 화면에 추가</b></li>' +
-    '<li>이름 확인 → <b>추가</b></li></ol>' +
+    '<li>주소가 <b>github.io</b>로 시작하는지 · 이름 확인 → <b>추가</b></li></ol>' +
     '<p class="s">추가한 아이콘을 누르면 이 화면 없이 바로 열립니다.</p>' +
-    '<a class="go" href="' + u.replace(/"/g, '&quot;') + '" rel="noreferrer">지금 바로 열기</a>';
+    '<p class="s"><a class="lk" href="' + u.replace(/"/g, '&quot;') + '" rel="noreferrer">추가하지 않고 이번만 열기</a></p>';
 })();
