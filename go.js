@@ -19,10 +19,10 @@
   var ios = /iPhone|iPad|iPod/.test(ua), nm = n ? n.replace(/[<>&"]/g, '') : '';
   var lk = '<p class="s"><a class="lk" href="' + u.replace(/"/g, '&quot;') + '" rel="noreferrer">추가하지 않고 이번만 열기</a></p>';
   if (inApp) {
-    m.innerHTML = '<h1>Safari로 열어 주세요</h1>' + (nm ? '<p class="nm">' + nm + '</p>' : '') +
+    m.innerHTML = '<h1>' + (ios ? 'Safari로' : 'Chrome으로') + ' 열어 주세요</h1>' + (nm ? '<p class="nm">' + nm + '</p>' : '') +
       '<p class="w">카카오톡 등 앱 안의 화면에서는 홈 화면에 추가할 수 없습니다.</p>' +
-      '<ol><li>오른쪽 아래 <b>공유</b>(네모에 위 화살표) 또는 <b>⋯</b> 버튼</li>' +
-      '<li><b>' + (ios ? 'Safari로 열기' : '다른 브라우저로 열기 · Chrome') + '</b></li>' +
+      (ios ? '<ol><li>오른쪽 아래 <b>공유</b>(네모에 위 화살표) 또는 <b>⋯</b> 버튼</li><li><b>Safari로 열기</b></li>'
+        : '<ol><li>오른쪽 위 <b>⋮</b> 버튼</li><li><b>다른 브라우저로 열기</b> → <b>Chrome</b></li>') +
       '<li>열린 화면에서 다시 이 안내를 따라 추가</li></ol>' + lk;
     return;
   }
